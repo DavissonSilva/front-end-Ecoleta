@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/create-point.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/responsive.css">
+
 </head>
 <body>
     
@@ -45,9 +46,11 @@
                             <div class="field">
                                 <label for="state">Estado</label>
                                 <select name="uf">
-                                    <option value="">Selecione o Estado/>
+                                    <option value="">Selecione o Estado
+                                 
                                 </select>
                               
+                                <input type="hidden" name="state" >
                             </div>
 
 
@@ -56,9 +59,9 @@
 
                             <div class="field">
                                 <label for="city">Cidade</label>
-                               <select name="city">
-                                <option value="">Selecione a Cidade/>
-                               </select>/>
+                               <select name="city" disabled>
+                                <option value="">Selecione a Cidade
+                               </select>
                                
                             </div>
                        
@@ -68,17 +71,12 @@
 
 
 
-                    <fieldset>
-                        <legend>
-                            <h2>itens de coleta</h2>
-                        </legend>
-                        <button type="submit">Cadastrar ponto de coleta</button>
-                    </fieldset>
+                    <button type="submit">Cadastrar ponto de coleta</button>
                 </form>
             
         
         </div>
 
-
+<script src="scripts/create-point.js"></script>
 </body>
 </html>
