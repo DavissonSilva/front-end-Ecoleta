@@ -29,4 +29,8 @@
     #page-home {
         background-position-y: 200px;
     }
+
+    #page-search-results .cards{
+        grid-template-columns: ;
+    }
 }
