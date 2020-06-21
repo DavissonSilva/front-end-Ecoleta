@@ -1,5 +1,5 @@
 
-							![alt text](assets/logo.png)
+							![alt text](assets/logo.svg)
 # Ecoleta 
 
 
