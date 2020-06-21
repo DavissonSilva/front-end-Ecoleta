@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DavissonSilva/front-end-Ecoleta#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
   }
 }
