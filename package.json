@@ -1,0 +1,22 @@
+{
+  "name": "front-end-Ecoleta",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavissonSilva/front-end-Ecoleta.git"
+  },
+  "keywords": [],
+  "author": "Davisson Cardoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavissonSilva/front-end-Ecoleta/issues"
+  },
+  "homepage": "https://github.com/DavissonSilva/front-end-Ecoleta#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
