@@ -1,57 +1,55 @@
-<!DOCTYPE html>
-<html lang="pt_br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado de persquisa </title>
+{% extends "layout.html" %}
+{% set bodyId = "page-home" %}
+{% block title %}
+    <title>Resultado de persquisa</title>
+{% endblock title %}
+
+{% block styles %}
     <link rel="stylesheet" href="styles/search-results.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/responsive.css">
+{% endblock styles %}
 
-</head>
-<body>
-    
-        <div id ="page-search-results">
-           
-            {%include "partials/page-header.html"%}
+{% block content %}
+    <div id="page-search-results">
 
-           
-            <main>
-                <h4><strong>2 pontos </strong> encontrados </h4>
-               
-                <div class="cards">
-                    <div class="card">
-                        <img src="assets/coleta.jpg" alt="Colectoria">
-                        <h1>Colectoria</h1>
-                        <h3> Residuos Eletrônicos, Lâmpadas</h3>
-                        <p>
-                            Rio do sul, Santa Catarina </br>
-                            Guilherme Gemballa,Jardim America</br>
-                            N°260
-                        </p>
-                    </div>
+        {%include "partials/page-header.html"%}
 
-                    <div class="card">
+        <main>
+            <h4>
+                <strong>2 pontos
+                </strong>
+                encontrados
+            </h4>
 
-                        <img src="assets/coleta1.jpg" alt="Colectoria">
-                        <h1>Papersider</h1>
-                        <h3> Papéis e Papelão</h3>
-                        <p>
-                            Rio do sul, Santa Catarina </br>
-                            Guilherme Gemballa,Jardim America</br>
-                            N°260
-                        </p>
-                    </div>
-               
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/coleta.jpg" alt="Colectoria">
+                    <h1>Colectoria</h1>
+                    <h3>
+                        Residuos Eletrônicos, Lâmpadas</h3>
+                    <p>
+                        Rio do sul, Santa Catarina
+                        <br>
+                        Guilherme Gemballa,Jardim America<br>
+                        N°260
+                    </p>
                 </div>
-                
-               
 
+                <div class="card">
 
+                    <img src="assets/coleta1.jpg" alt="Colectoria">
+                    <h1>Papersider</h1>
+                    <h3>
+                        Papéis e Papelão</h3>
+                    <p>
+                        Rio do sul, Santa Catarina
+                        <br>
+                        Guilherme Gemballa,Jardim America<br>
+                        N°260
+                    </p>
+                </div>
 
-            </main>
-        </div>
+            </div>
 
-
-</body>
-</html>
+        </main>
+    </div>
+{% endblock content %}
