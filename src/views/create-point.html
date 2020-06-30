@@ -10,65 +10,69 @@
 {% endblock styles %}
 
 {% block content %}
+    {% include "partials/page-header.html" %}
+    <form action="/savepoint" method="POST">
 
-    <div id="page-create-point">
+        <h1>Cadastro do ponto de coleta</h1>
 
-        {%include "partials/page-header.html"%}
+        <fieldset>
+            <legend>
+                <h2>Dados da entidade</h2>
+            </legend>
 
-        <form action="">
-            <h1>Cadastro do ponto de coleta</h1>
-            <fieldset>
-                <legend>
-                    <h2>Dados da entidade</h2>
-                </legend>
-                .
-
+            <div class="field-group">
                 <div class="field">
-                    <label for="name">Nome da entidade
-                    </label>
+                    <label for="name">Nome da Entidade</label>
                     <input type="text" name="name" required="required">
                 </div>
-                <div class="field-group">
-                    <div class="field">
-                        <label for="address">Endereço</label>
-                        <input type="text" name="address">
-                    </div>
-                    <div class="field">
-                        <label for="address2">Número/Complemento</label>
-                        <input type="text" name="address2" required="required">
-                    </div>
+                <div class="field">
+                    <label for="image">Imagem da Entidade</label>
+                    <input 
+                        type="url"
+                        placeholder="http://" 
+                        name="image" 
+                        required="required">
                 </div>
 
-                <div class="field-group">
-                    <div class="field">
-                        <label for="state">Estado</label>
-                        <select name="uf" required="required">
-                            <option value="">Selecione o Estado
+            </div>
 
-                            </select>
+            
 
-                            <input type="hidden" name="state" required="required">
-                        </div>
+            <div class="field-group">
+                <div class="field">
+                    <label for="address">Endereço</label>
+                    <input type="text" name="address" required="required">
+                </div>
+                <div class="field">
+                    <label for="address2">Número/Complemento</label>
+                    <input type="text" name="address2" required="required">
+                </div>
+            </div>
 
-                        <div class="field">
-                            <label for="city">Cidade</label>
-                            <select name="city" disabled="disabled" required="required">
-                                <option value="">Selecione a Cidade
-                                </select>
+            <div class="field-group">
+                <div class="field">
+                    <label for="state">Estado</label>
+                    <select name="uf" required="required">
+                        <option value="">Selecione o Estado</option>
+                    </select>
+                    <input type="hidden" name="state">
+                </div>
+                <div class="field">
+                    <label for="city">Cidade</label>
+                    <select name="city" disabled="disabled" required="required">
+                        <option value="">Selecione a cidade</option>
+                    </select>
+                </div>
+            </div>
 
-                            </div>
+        </fieldset>
 
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-
-                        <legend>
-                            <h2>Itens de coleta</h2>
-                            <span>Selecione um ou mais items</span>
-                        </legend>
-
-                        <div class="items-grid">
+        <fieldset>
+            <legend>
+                <h2>Itens de coleta</h2>
+                <span>Selecione um ou mais itens abaixo</span>
+            </legend>
+             <div class="items-grid">
                             <li data-id="1">
                                 <img src="assets/lampadas.svg" alt="Lâmpadas">
                                 <span>
@@ -101,14 +105,18 @@
                             </li>
 
                         </div>
-                        <input type="hidden" name="items" value="">
-                    </fieldset>
 
-                    <button type="submit">Cadastrar ponto de coleta</button>
-                </form>
+            <input type="hidden" name="items">
 
-            </div>
-        {% endblock content %}
+        </fieldset>
+
+        <button type="submit">Cadastrar ponto de coleta</button>
+
+    </form>
+
+
+
+{% endblock content %}
 
 {% block scripts %}
     <script src="scripts/create-point.js"></script>
